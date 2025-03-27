@@ -4,14 +4,14 @@
     font-size: 10px;
    --main-color: #d3ad7f;
    --black: #131313;
-   --bg: #010103;
+   --bg:rgb(0, 0, 0);
    --border:  0.1rem solid rgba(255, 255, 255, 0.3);
    --color-primary-1: #fff9ea;
    --color-primary-2: #ffe8b4;
    --color-primary-3: #f8d477;
    --color-primary-4: #ffe100;
    --color-primary-5: #ffcb45;
-   --color-primary-6: #e9a209;
+   --color-primary-6:rgb(254, 229, 198);
 
    --color-neutral-0: #fff;
    --color-neutral-1: #1d1d1d;
@@ -53,7 +53,7 @@ html {
     width: 100%;
     position: fixed;
     top: 0;
-    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 50%, rgba(54, 54, 54, 0.7) 80%, rgba(52, 52, 52, 0.7) 5%);
+    background: linear-gradient(109deg, rgba(10, 12, 16, 1) 50%, rgba(54, 54, 54, 0.4) 80%, rgba(52, 52, 52, 0.4) 5%);
     z-index: 1; /* Garante que a máscara fique acima do vídeo */
 }
 
@@ -75,28 +75,34 @@ section{
     width: 100vw;
 }
 
-.header section{
+.header section {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 50px;
-    padding-top: 1.5rem 0;
+    justify-content: space-between; /* Alterado para space-between */
+    padding: 1.5rem 5%; /* Adicionado padding lateral */
     position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 12vh;
 }
 
-.header section a img {
-    height: 6rem;
+.header section nav {
+    display: flex;
+    justify-content: center; /* Centraliza os links */
+    flex-grow: 1; /* Permite que o nav ocupe o espaço disponível */
+    gap: 5rem; /* Espaçamento entre os links */
+    
 }
 
 .header section nav a {
     margin: 0 1rem;
     font-size: 1.8rem;
-    color: white;
+    color: var(--main-color);
     transition: 0.4s linear;
 }
 
 .header section nav a:hover {
-    color: var(--main-color);
+    color: var(--color-primary-6);
     border-bottom: 0.1rem solid var(--main-color);
     padding-bottom: 0.5rem;
 }
@@ -115,6 +121,10 @@ section{
     color: white;
     font-size: 6rem;
     text-transform: uppercase;
+}
+
+.caixa-principal div h3 span{
+    color: var(--main-color);
 }
 
 .caixa-principal div p{
@@ -161,6 +171,7 @@ section{
     background-color: var(--black);
     gap: 1.5rem;
     flex-wrap: wrap;
+    border-radius: 2rem;
 }
 
 .caixa-sobre .sobre-container .sobre-imagem{
@@ -251,7 +262,7 @@ section{
 
 .dish-heart {
     position: absolute;
-    background-color: var(--color-primary-6);
+    background-color: var(--color-primary-5);
     display: flex;
     align-items: center;
     justify-content: center;
