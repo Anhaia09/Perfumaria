@@ -8,7 +8,7 @@
    --border:  0.1rem solid rgba(255, 255, 255, 0.3);
    --color-primary-1: #fff9ea;
    --color-primary-2: #ffe8b4;
-   --color-primary-3: #f8d477;
+   --color-primary-3:rgb(222, 197, 134);
    --color-primary-4: #ffe100;
    --color-primary-5: #ffcb45;
    --color-primary-6:rgb(254, 229, 198);
@@ -97,7 +97,7 @@ section{
 .header section nav a {
     margin: 0 1rem;
     font-size: 1.8rem;
-    color: var(--main-color);
+    color: var(--color-primary-2);
     transition: 0.4s linear;
 }
 
@@ -136,7 +136,7 @@ section{
 }
 
 .botao-link{
-    background-color: var(--main-color);
+    background-color: var(--color-primary-3);
     cursor: pointer;
     margin-top: 2rem;
     display: inline-block;
